@@ -101,7 +101,7 @@ nav {
     
   /* Estilos generales para .cuadro */
 .cuadro {
-    flex: 1;
+   
     max-width: 50%; /* Ancho máximo del 50% para pantallas grandes */
     height: 70vh; /* Altura adaptativa */
     animation: fondo-cambiar 10s infinite; /* Cambia cada 10 segundos */
@@ -127,10 +127,10 @@ nav {
   
   /* Estilos para el contenido dentro de .cuadro */
   .contenido {
-    padding: 10px; /* Espacio interno */
+    padding: 1%; /* Espacio interno */
     color: white; /* Color del texto */
     margin: 0; /* Elimina márgenes */
-    font-size: 30px; /* Tamaño de fuente */
+    font-size: 200%; /* Tamaño de fuente */
     white-space: nowrap; /* Evita que el texto se divida */
     overflow: hidden; /* Oculta el texto que se desborda */
     position: relative; /* Para que el texto se posicione dentro de su contenedor */
@@ -147,17 +147,20 @@ nav {
 
       height: auto; /* Ajusta la altura automáticamente */
     }
+    .cuadro img {
+        margin-top: 1%;
+      }
   }
   
   /* Media query para pantallas pequeñas */
   @media (max-width: 480px) {
     .cuadro {
     margin-top: 30%;
-      max-width: 95%; /* Ancho mayor en pantallas más pequeñas */
-      height: 50vh; /* Ajusta la altura también */
+      max-width: 100%; /* Ancho mayor en pantallas más pequeñas */
+      max-height: 400px; /* Ajusta la altura también */
     }
     .cuadro img {
-      margin-top: 15%;
+      margin-top: 30%;
     }
     .contenedor {
       height: auto; /* Ajusta la altura automáticamente */
