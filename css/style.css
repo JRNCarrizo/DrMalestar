@@ -180,7 +180,7 @@ nav {
     background-color: rgba(117, 0, 0, 0.9); /* Fondo con opacidad */
     padding: 10px; /* Espacio entre el borde y las imágenes */
     border-radius: 30px; /* Bordes redondeados */
-    max-width: 90%;
+    max-width: 80%;
   }
   
   /* Estilos para la imagen dentro de .cuadroFlyer */
