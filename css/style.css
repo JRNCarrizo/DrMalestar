@@ -43,96 +43,10 @@ nav {
         background-attachment: fixed;
         background-size: cover;
     }
-    
-    /* ImagenPrincipal */
-    .contenedor {
-        width:100%; /* Ocupar todo el ancho */
-        display: flex;
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Alinea verticalmente */
-        padding: 20px;
-        margin: 0;
-        height: 120vh; /* Altura de la ventana gráfica */
-    }
 
-    /* Imagenes que cambian */
 
-    @keyframes fondo-cambiar {
-        0% {
-            background-image: url('/img/pappo1.avif');
-        }
-        50% {
-            background-image: url('/img/pappo2.webp');
-        }
-        100% {
-            background-image: url('/img/pappo3.jpg');
-        }
-    }
-    
-    .cuadro {
-        flex: 1;
-        max-width: 600px; /* Ancho máximo */
-        width: 80%; /* Ancho adaptativo */
-        height: 70vh; /* Altura adaptativa */
-        animation: fondo-cambiar 10s infinite; /* Cambia cada 10 segundos */
-        background-size: cover; /* Cubrir todo el cuadro */
-        border: 2px solid #fcfcfc;
-        background-position: center; /* Centrar la imagen de fondo */
-        border-radius: 15px; /* Bordes redondeados */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Sombra */
-        position: relative; /* Posición relativa para el contenido interno */
-        margin: 20px 0; /* Espacio superior e inferior */
-        flex-direction: column;
-        display: flex;
-    }
-    
-    .cuadro img {
-        position: absolute;
-        width: 100%; /* La imagen principal ocupa todo el ancho */
-        height: auto; /* Mantiene la proporción de la imagen */
-        margin-top: 45px;   
-        object-fit: cover; /* Asegura que la imagen cubra el área */
-    }
-    .contenido {
-        padding: 10px; /* Espacio interno */
-        color: white; /* Color del texto */
-        margin: 0; /* Elimina márgenes */
-        font-size: 30px; /* Tamaño de fuente */
-        white-space: nowrap; /* Evita que el texto se divida */
-        overflow: hidden; /* Oculta el texto que se desborda */
-        position: relative; /* Para que el texto se posicione dentro de su contenedor */
-    }
-    
- 
-    @media (min-width: 481px) and (max-width: 768px) {
-        .cuadro {
-            margin-top: 30%;
-            width: 95%; /* Ancho mayor en pantallas más pequeñas */
-            height: 70vh; /* Ajusta la altura también */
-        }
-        .cuadro img{
-            
-        }
-        .contenedor{
-            height: 100vh;
-        }
-    }
-    @media (max-width: 480px) {
-        .cuadro {
-            width: 95%; /* Ancho mayor en pantallas más pequeñas */
-            height: 50vh; /* Ajusta la altura también */
-        }
-        .cuadro img{
-            margin-top: 120px;
-        }
-        .contenedor{
-            height: 90vh;
-        }
-
-    }
-
-   /* Texto desplazante */
-    .texto-desplazante {
+      /* Texto desplazante */
+      .texto-desplazante {
         display: inline-block; /* Permite que el texto ocupe solo el espacio requerido */
         animation: desplazar 15s linear infinite; /* Animación de desplazamiento */
     }
@@ -159,30 +73,132 @@ nav {
         font-weight: 400;
         font-style: normal;
       }
-      
-   
     
-    /* Cadena Cartelera */
-    .containerFlyer{
+    /* ImagenPrincipal */
+    .contenedor {
+        width:100%; /* Ocupar todo el ancho */
         display: flex;
         justify-content: center; /* Centra horizontalmente */
-        align-items: center;     /* Centra verticalmente */
-        height: 80vh;           /* Altura del contenedor igual a la altura de la ventana */
-        width: 100%;
+        align-items: center; /* Alinea verticalmente */
+        padding: 20px;
+        margin: 0;
+        height: 120vh; /* Altura de la ventana gráfica */
     }
-    .cuadroFlyer{
-        border:2px solid #ffffff;
-        background-color: rgba(117, 0, 0, 0.5); /* Fondo blanco con 50% de opacidad */
-        padding: 10px; /* Espacio entre el borde y las imágenes */
-        border-radius: 30px; /* Bordes redondeados */
-        width: 90%;
 
+    /* Imagenes que cambian */
+
+    @keyframes fondo-cambiar {
+        0% {
+            background-image: url('/img/pappo1.avif');
+        }
+        50% {
+            background-image: url('/img/pappo2.webp');
+        }
+        100% {
+            background-image: url('/img/pappo3.jpg');
+        }
     }
-    .flyer{
-        width: 100%; /* Ancho al 100% del contenedor */
-        height: 270px; /* Altura ajustada automáticamente */
-        object-fit: contain;
+    
+  /* Estilos generales para .cuadro */
+.cuadro {
+    flex: 1;
+    max-width: 50%; /* Ancho máximo del 50% para pantallas grandes */
+    height: 70vh; /* Altura adaptativa */
+    animation: fondo-cambiar 10s infinite; /* Cambia cada 10 segundos */
+    background-size: cover; /* Cubrir todo el cuadro */
+    border: 2px solid #fcfcfc;
+    background-position: center; /* Centrar la imagen de fondo */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Sombra */
+    position: relative; /* Posición relativa para el contenido interno */
+    margin: 20px 0; /* Espacio superior e inferior */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Estilos para la imagen dentro de .cuadro */
+  .cuadro img {
+    position: absolute;
+    max-width: 100%; /* La imagen principal ocupa todo el ancho */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-top: 10%;
+    object-fit: cover; /* Asegura que la imagen cubra el área */
+  }
+  
+  /* Estilos para el contenido dentro de .cuadro */
+  .contenido {
+    padding: 10px; /* Espacio interno */
+    color: white; /* Color del texto */
+    margin: 0; /* Elimina márgenes */
+    font-size: 30px; /* Tamaño de fuente */
+    white-space: nowrap; /* Evita que el texto se divida */
+    overflow: hidden; /* Oculta el texto que se desborda */
+    position: relative; /* Para que el texto se posicione dentro de su contenedor */
+  }
+  
+  /* Media query para pantallas medianas */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .cuadro {
+      margin-top: 20%;
+      max-width: 95%; /* Ancho mayor en pantallas más pequeñas */
+      height: 70vh; /* Ajusta la altura también */
     }
+    .contenedor {
+
+      height: auto; /* Ajusta la altura automáticamente */
+    }
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 480px) {
+    .cuadro {
+    margin-top: 30%;
+      max-width: 95%; /* Ancho mayor en pantallas más pequeñas */
+      height: 50vh; /* Ajusta la altura también */
+    }
+    .cuadro img {
+      margin-top: 15%;
+    }
+    .contenedor {
+      height: auto; /* Ajusta la altura automáticamente */
+    }
+  }
+  
+  /* Estilos para .containerFlyer */
+  .containerFlyer {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 80vh; /* Altura del contenedor */
+    max-width: 100%;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas */
+  }
+  
+  /* Estilos para .cuadroFlyer */
+  .cuadroFlyer {
+    border: 2px solid #ffffff;
+    background-color: rgba(117, 0, 0, 0.9); /* Fondo con opacidad */
+    padding: 10px; /* Espacio entre el borde y las imágenes */
+    border-radius: 30px; /* Bordes redondeados */
+    max-width: 90%;
+  }
+  
+  /* Estilos para la imagen dentro de .cuadroFlyer */
+  .flyer {
+    max-width: 100%; /* Ancho al 100% del contenedor */
+    max-height: 100%; /* Altura ajustada automáticamente */
+    object-fit: contain;
+  }
+  
+  /* Media query para pantallas medianas */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .containerFlyer {
+      height: auto; /* Ajusta la altura automáticamente */
+    }
+  }
+  
+
+/*  */
     .tituloShow{
         text-align: center;
         color: rgb(255, 255, 255); 
