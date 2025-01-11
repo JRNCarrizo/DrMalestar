@@ -27,6 +27,7 @@ nav {
     .navbar {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
         background: linear-gradient(135deg, #000000, #2d2c2c);
+        
     }
     /* Fuente de letras de la barra */
     .rubik-vinyl-regular {
@@ -35,7 +36,7 @@ nav {
         font-style: normal;
       }
 
-      body {
+      .bodyP {
         margin: 0;
         padding: 0;
         background-image: url('/img/fondo.jpg');
@@ -209,3 +210,58 @@ nav {
         border-radius: 25px;
         border: 2px solid #ffffff;
     }
+
+    /* videos */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+      gap: 20px; /* Espacio entre los videos */
+      padding: 20px; /* Espaciado interno */
+      max-width: 1200px; /* Ancho máximo de la cuadrícula */
+      margin: auto; /* Centrar la cuadrícula */
+      
+  }
+
+    .video-container {
+      background-color: rgba(0, 0, 0, 0.9); /* Fondo con opacidad */
+      display: flex;
+      flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+      align-items: center; /* Centra horizontalmente */
+      padding: 15px; /* Espaciado interno */
+      max-width: 640px; /* Ancho máximo del marco */
+      margin: auto; /* Centrar el marco */
+
+  }
+  .video-container:hover {
+    background-color: rgba(117, 0, 0, 0.9); /* Fondo con opacidad */
+}
+  .video-description {
+      text-align: center; /* Centrar el texto de la descripción */
+      margin-top: 10px; /* Espaciado superior */
+      font-family: Arial, sans-serif; /* Fuente de la descripción */
+      color: #ffffff; /* Color del texto */
+  }
+  @media (max-width: 600px) {
+    .video-grid {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+        margin-top: 20%;
+    }
+}
+@media (min-width: 481px) and (max-width: 900px) {
+  .video-grid {
+    grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    margin-top: 10%;
+  }
+}
+
+
+/* Efecto de hover en la imagen del logo */
+.navbar-brand img {
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.2); /* Aumenta el tamaño de la imagen al 110% */
+}
+
+

@@ -9,6 +9,11 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(item => {
 });
 
 
+fetch('navegador.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('navegador').innerHTML = data;
+});
 fetch('cardPrincipal.html')
 .then(response => response.text())
 .then(data => {
@@ -18,6 +23,11 @@ fetch('cartelera.html')
 .then(response => response.text())
 .then(data => {
     document.getElementById('cartelera').innerHTML = data;
+});
+fetch('videos.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('videos').innerHTML = data;
 });
 
 // carrusel
