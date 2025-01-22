@@ -29,6 +29,21 @@ fetch('videos.html')
 .then(data => {
     document.getElementById('videos').innerHTML = data;
 });
+fetch('form.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('form').innerHTML = data;
+});
+fetch('final.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('final').innerHTML = data;
+});
+fetch('biografia.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('biografia').innerHTML = data;
+});
 
 // carrusel
 

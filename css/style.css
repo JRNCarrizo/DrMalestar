@@ -178,13 +178,19 @@ nav {
     flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas */
   }
   
+
   /* Estilos para .cuadroFlyer */
+  #cartelera{
+    padding: 52px 0; /* Espacio alrededor de la sección */
+    /* O puedes usar margin-top si prefieres */
+  }
   .cuadroFlyer {
     border: 2px solid #ffffff;
     background-color: rgba(117, 0, 0, 0.9); /* Fondo con opacidad */
     padding: 10px; /* Espacio entre el borde y las imágenes */
     border-radius: 30px; /* Bordes redondeados */
     max-width: 80%;
+    
   }
   
   /* Estilos para la imagen dentro de .cuadroFlyer */
@@ -198,7 +204,9 @@ nav {
   @media (min-width: 481px) and (max-width: 768px) {
     .containerFlyer {
       height: auto; /* Ajusta la altura automáticamente */
+      
     }
+   
   }
   
 
@@ -212,6 +220,15 @@ nav {
     }
 
     /* videos */
+    .tituloVideo{
+      text-align: center;
+      color: rgb(255, 255, 255); 
+      background-color: #000000;
+      border-radius: 25px;
+      border: 2px solid #ffffff;
+      margin-top: 20px;
+    
+  }
     .video-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr); /* 2 columnas */
@@ -222,16 +239,18 @@ nav {
       
   }
 
-    .video-container {
-      background-color: rgba(0, 0, 0, 0.9); /* Fondo con opacidad */
-      display: flex;
-      flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-      align-items: center; /* Centra horizontalmente */
-      padding: 15px; /* Espaciado interno */
-      max-width: 640px; /* Ancho máximo del marco */
-      margin: auto; /* Centrar el marco */
+  .video-container {
+    display: inline-block; /* Permite que el contenedor se ajuste al tamaño del contenido */
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    margin: 10px; /* Espaciado entre contenedores */
+}
 
-  }
+.video-container video {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: auto; /* Mantiene la proporción original */
+    object-fit: cover; /* Cubre el contenedor sin distorsionar */
+}
   .video-container:hover {
     background-color: rgba(117, 0, 0, 0.9); /* Fondo con opacidad */
 }
@@ -244,16 +263,26 @@ nav {
   @media (max-width: 600px) {
     .video-grid {
         grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
-        margin-top: 20%;
+        margin-top: 0%;
+    }
+    .tituloVideo{
+      margin-top: 150px ;
     }
 }
-@media (min-width: 481px) and (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 900px) {
   .video-grid {
     grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
-    margin-top: 10%;
+    margin-top: 1%;
+  }
+  .tituloVideo{
+    
   }
 }
 
+#videos {
+  padding: 60px 0; /* Espacio alrededor de la sección */
+  /* O puedes usar margin-top si prefieres */
+}
 
 /* Efecto de hover en la imagen del logo */
 .navbar-brand img {
@@ -265,3 +294,178 @@ nav {
 }
 
 
+/* agrtegado de porfo */
+
+/* formulario mail */
+/* formulario mail */
+#form {
+  display: flex; /* Usamos flexbox para el formulario */
+  flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+  justify-content: center; /* Centra los elementos */
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.inputForm {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  width: calc(50% - 20px); /* Ancho del 50% menos margen para pantallas grandes */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+.inputForm:focus {
+  border-color: #dc0000; /* Cambia el color del borde al enfocar */
+  outline: none; /* Elimina el contorno predeterminado */
+}
+
+.inputText {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  width: calc(100% - 40px); /* Ancho responsivo con margen */
+  margin: 10px auto; /* Centrado automático */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+.inputText:focus {
+  border-color: #dc0000; /* Cambia el color del borde al enfocar */
+  outline: none; /* Elimina el contorno predeterminado */
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .inputForm {
+      width: calc(100% - 40px); /* Ancho completo en pantallas más pequeñas */
+    margin: 10px;
+  }
+}
+
+.botonForm {
+  display: flex;
+  justify-content: center; /* Centra el botón */
+  margin-top: 3px; /* Espacio superior */
+  margin-bottom: 50px;
+}
+
+.titulos{
+  color: #ffffff;
+}
+
+/* Info final */
+
+.containerInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.contact-info {
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 1200px; /* Ancho máximo para evitar que se estire demasiado */
+  padding: 0 20px; /* Espacio interior */
+  text-align: center; /* Centrar texto */
+}
+.contact-info div {
+  flex: 1; /* Hace que cada div ocupe el mismo espacio */
+  margin: 0 20px; /* Margen entre los elementos */
+}
+
+/* Consulta de medios para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contact-info {
+      flex-direction: column; /* Cambiar a columna */
+      align-items: center; /* Centrar elementos en la columna */
+  }
+  .contact-info div {
+      margin: 10px 0; /* Margen vertical entre elementos */
+  }
+  .containerInfo{
+    height: 40vh;
+  }
+}
+
+ body{
+  margin-top: 100px;
+  overflow-x: hidden;
+ }
+
+/* Biografia */
+#biografia {
+  padding: 60px 0; /* Espacio alrededor de la sección */
+}
+
+.bodys {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Para centrar en pantallas pequeñas */
+}
+
+.containerBio {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 1000px;
+}
+
+.imagesBio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
+  margin: 10px;
+}
+
+.imagesBio img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.cardBio {
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .containerBio {
+    flex-direction: column; /* Cambia a columna en pantallas medianas */
+    width: auto; /* Permite que la anchura sea automática */
+  }
+
+  .imagesBio {
+    width: 100%; /* Las columnas ocupan el 100% del ancho */
+    margin: 0; /* Elimina el margen en columnas de imagen */
+  }
+}
+
+@media (max-width: 480px) {
+  .bodys {
+    padding: 20px; /* Espaciado más pequeño en pantallas pequeñas */
+  }
+
+  .imagesBio {
+    width: 100%; /* Asegura que las imágenes ocupen el 100% del ancho */
+  }
+
+  .imagesBio img {
+    margin-bottom: 5px; /* Reduce el margen en imágenes */
+  }
+}
+@media (max-width: 600px){}
+@media (min-width: 600px) and (max-width: 900px){}
