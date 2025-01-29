@@ -167,57 +167,93 @@ nav {
       height: auto; /* Ajusta la altura automáticamente */
     }
   }
+
+  /* cartelera */
   
-  /* Estilos para .containerFlyer */
   .containerFlyer {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    height: 80vh; /* Altura del contenedor */
-    max-width: 100%;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas */
-  }
-  
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente el contenido */
+    padding: 20px 0; /* Espacio alrededor del contenedor */
+}
 
-  /* Estilos para .cuadroFlyer */
-  #cartelera{
-    padding: 52px 0; /* Espacio alrededor de la sección */
-    /* O puedes usar margin-top si prefieres */
-  }
-  .cuadroFlyer {
+#cartelera {
+    padding: 20px 0; /* Espacio alrededor de la sección */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas */
+    justify-content: center; /* Centra los flyers */
+    width: 100%; /* Asegura que la fila ocupe el ancho completo */
+}
+
+.flyerContainer {
+    margin: 10px; /* Espacio entre flyers */
+    flex: 1 1 180px; /* Ajusta el ancho mínimo de los flyers */
+    display: flex; /* Usar flex para centrar el contenido dentro del contenedor */
+    flex-direction: column; /* Asegura que la imagen y los botones se apilen verticalmente */
+    align-items: center; /* Centra los elementos dentro de flyerContainer */
+}
+
+.flyerBox {
     border: 2px solid #ffffff;
     background-color: rgba(117, 0, 0, 0.9); /* Fondo con opacidad */
-    padding: 10px; /* Espacio entre el borde y las imágenes */
-    border-radius: 30px; /* Bordes redondeados */
-    max-width: 80%;
-    
-  }
-  
-  /* Estilos para la imagen dentro de .cuadroFlyer */
-  .flyer {
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 8px; /* Espacio interno reducido */
+    text-align: center; /* Centra el contenido dentro del cuadro */
+    max-width: 300px; /* Ancho máximo para los cuadros */
+}
+
+.flyer {
     max-width: 100%; /* Ancho al 100% del contenedor */
     max-height: 100%; /* Altura ajustada automáticamente */
     object-fit: contain;
-  }
-  
-  /* Media query para pantallas medianas */
-  @media (min-width: 481px) and (max-width: 768px) {
-    .containerFlyer {
-      height: auto; /* Ajusta la altura automáticamente */
-      
-    }
-   
-  }
-  
+    margin-bottom: 10px; /* Espacio entre la imagen y los botones */
+}
 
-/*  */
-    .tituloShow{
-        text-align: center;
-        color: rgb(255, 255, 255); 
-        background-color: #000000;
-        border-radius: 25px;
-        border: 2px solid #ffffff;
+.btn {
+    display: inline-block;
+    width: 160px; /* Ancho fijo */
+    padding: 8px 16px; /* Ajuste en el padding */
+    margin: 5px 0; /* Espaciado entre botones */
+    font-size: 16px;
+    color: white;
+    background-color: #000000; /* Color de fondo */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #0015ff; /* Color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Efecto de aumento */
+    color: #ffffff; /* Color del texto al hacer hover */
+}
+
+.btn:active {
+    background-color: #900c3f; /* Color de fondo al hacer clic */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 480px) {
+    .flyerContainer {
+        flex: 1 1 100%; /* Cada flyer ocupa el 100% del ancho */
     }
+}
+
+
+.bungee-spice-regular {
+  font-family: "Bungee Spice", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #000000;
+  border-radius: 10px;
+  border: 2px solid #dc0000;
+}
 
     /* videos */
     .tituloVideo{
@@ -273,9 +309,6 @@ nav {
   .video-grid {
     grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
     margin-top: 1%;
-  }
-  .tituloVideo{
-    
   }
 }
 
@@ -413,20 +446,18 @@ nav {
 
 .containerBio {
   display: flex;
-  align-items: center;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 1000px;
+  align-items: flex-start; /* Alinea la parte superior */
+  position: relative;
+  max-width: 1000px; /* Limita el ancho máximo */
+  margin: 0 auto; /* Centra el contenedor */
 }
 
 .imagesBio {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 250px;
-  margin: 10px;
+  width: 100px; /* Ancho fijo para las imágenes */
+  margin: 10px; /* Espaciado entre imágenes y el texto */
 }
 
 .imagesBio img {
@@ -437,8 +468,16 @@ nav {
 
 .cardBio {
   padding: 20px;
-  flex: 1;
+  flex: 1; /* Ocupa el espacio restante */
   text-align: center;
+  background: white;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra */
+  position: relative;
+}
+
+.cardBio h1 {
+  margin-bottom: 20px; /* Espaciado inferior del título */
 }
 
 /* Media Queries */
@@ -446,11 +485,12 @@ nav {
   .containerBio {
     flex-direction: column; /* Cambia a columna en pantallas medianas */
     width: auto; /* Permite que la anchura sea automática */
+    align-items: center; /* Centra el contenido */
   }
 
   .imagesBio {
     width: 100%; /* Las columnas ocupan el 100% del ancho */
-    margin: 0; /* Elimina el margen en columnas de imagen */
+    margin: 10px 0; /* Espaciado vertical */
   }
 }
 
@@ -467,5 +507,106 @@ nav {
     margin-bottom: 5px; /* Reduce el margen en imágenes */
   }
 }
-@media (max-width: 600px){}
-@media (min-width: 600px) and (max-width: 900px){}
+
+/* botones */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.button {
+  padding: 15px 25px;
+  font-size: 16px;
+  color: white;
+  background-color: #ff5733; /* Color de fondo */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+}
+.button:hover {
+  background-color: #c70039; /* Color de fondo al pasar el ratón */
+  transform: scale(1.05); /* Efecto de aumento */
+}
+.button:active {
+  background-color: #900c3f; /* Color de fondo al hacer clic */
+}
+
+
+
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Fijo al viewport */
+  z-index: 1000; /* Por encima de otros elementos */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Habilita scroll si es necesario */
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%; /* Ancho del modal */
+  max-width: 700px; /* Ancho máximo */
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.rowImages {
+  display: flex;
+  justify-content: center; /* Centra las imágenes */
+  margin: 20px 0; /* Espacio superior e inferior */
+}
+
+.rowImages img {
+  height: 220px; /* Altura fija para todas las imágenes */
+  width: auto; /* Ancho automático para respetar la proporción */
+  border-radius: 10px; /* Bordes redondeados */
+  margin: 0 10px; /* Espaciado horizontal entre imágenes */
+  object-fit: cover; /* Cubre el contenedor manteniendo la proporción */
+  border: 2PX SOLID #000000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9); /* Sombra */
+  transition: transform 0.3s ease; /* Suaviza la transición */ 
+}
+
+.rowImages img:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+}
+
+.cardBio {
+  max-width: 1100px; /* Establece un ancho máximo */
+  width: 90%; /* Ancho del contenedor relativo al tamaño de la pantalla */
+  margin: 20px auto; /* Centra el contenedor y agrega margen superior e inferior */
+  padding: 20px; /* Espacio interno */
+  text-align: center; /* Centra el texto */
+  background: rgb(0, 0, 0); /* Fondo blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9); /* Sombra */
+}
+
+
+.textoFinal{
+  background-color: #ffffffc1;
+}
+
+
+/* letras texto */
+.iceland-regular {
+  font-family: "Iceland", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 23px; /* Ajusta el tamaño de la fuente según sea necesario */
+  color: #ffffff;
+
+}

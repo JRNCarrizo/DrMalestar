@@ -1,44 +1,57 @@
-
-
 <div id="biografia" class="bodys">
+    <!-- Fila de imágenes superior -->
+    <div class="rowImages">
+        <img src="img/hugo1.jpg" alt="Hugo González" class="clickable" onclick="openModal(this)">
+        <img src="img/hector1.jpg" alt="Héctor Bass" class="clickable" onclick="openModal(this)">
+        <img src="img/Tano1.jpg" alt="Julio Macaroni" class="clickable" onclick="openModal(this)">
+        <img src="img/negro1.jpg" alt="Gus González" class="clickable" onclick="openModal(this)">
+        <img src="img/moncho1.jpg" alt="Jor Carrizo" class="clickable" onclick="openModal(this)">
+        <img src="img/banda1.jpg" alt="Jor Carrizo" class="clickable" onclick="openModal(this)">
+       
+    </div>
 
-<div class="containerBio">
-<div class="imagesBio" id="leftImages">
-    <img src="img/pappo3.jpg" alt="Imagen 1">
-    <img src="img/pappo3.jpg" alt="Imagen 2">
-    <img src="img/pappo3.jpg" alt="Imagen 3">
-    <img src="img/pappo3.jpg" alt="Imagen 3">
-    <img src="img/pappo3.jpg" alt="Imagen 3">
-</div>
-<div class="cardBio">
-    <h1>Biografía de la Banda</h1>
-    <p>
-        Dr. Malestar es una banda tributo que homenajea la trayectoria 
-        completa de Norberto Anibal Napolitano PAPPO. <br>Esta fue formada 
-        en 2013 en el barrio Texalar de Morón, zona oeste del Gran Buenos Aires. <br>
-         Su primer show tuvo lugar el 2 de agosto de 2013 en Bendito Bar de Ituzaingó.
-          A lo largo de su trayectoria, han compartido escenario con reconocidas bandas
-           y artistas como Horcas, Tren Loco, Serpentor, Alejandro Medina y Vitico. <br>
-           En 2014, se presentaron en la Plaza de Pappo junto a grandes bandas como Viticus y La Renga, 
-           y también participaron en el primer tributo a Pappo en el Parque Avellaneda. 
-      
-        <br>
-        La banda ha experimentado varias formaciones a lo largo de estos 12 años, <br> Actualmente Dr. Malestar está conformada por:
-        <br>
-        <b>Gus "El Negro" González</b> en voz y armónica <br>
-        <b>Hugo "El Mosca" Fleitas</b> en batería <br>
-        <b>Jor "El Moncho" Carrizo</b> en guitarra y coros <br>
-        <b>Julio "El Tano" Macaroni</b> en guitarra y coros <br>
-        <b>Héctor Bass</b> en bajo <br>
-        Para más información y actualizaciones sobre la banda, puedes visitar sus sitios oficial..</p>
-</div>
-<div class="imagesBio" id="rightImages">
-    <img src="img/pappo3.jpg" alt="Imagen 4">
-    <img src="img/pappo3.jpg" alt="Imagen 5">
-    <img src="img/pappo3.jpg" alt="Imagen 6">
-    <img src="img/pappo3.jpg" alt="Imagen 6">
-    <img src="img/pappo3.jpg" alt="Imagen 6">
-</div>
-</div>
+    <!-- Texto central de la biografía -->
+    <div class="cardBio">
+        <h1 class="bungee-spice-regular">Biografía de la Banda</h1>
+        <p class="iceland-regular">Dr. Malestar es una banda tributo que brinda homenaje a la obra completa de <b>Norberto Anibal “PAPPO” Napolitano</b> . <br>
+Los comienzos de la agrupación se originan en el año 2013, en el barrio Texalar de Morón, zona oeste del Gran Buenos Aires. <br>
+Su primer show tuvo lugar el 2 de agosto de 2013 en “Bendito Bar” en la ciudad de Ituzaingó. <br>
+A lo largo de los años quedan memorables presentaciones, en lugares emblemáticos como en la Plaza Dr. Roque Sáenz Peña “Plaza de Pappo”, en compañía de grandes bandas como “Viticus” y “La Renga”.
+Esta agrupación cuenta con el privilegio de haber participado en el Primer Tributo a “Pappo” en el Parque Avellaneda. <br>
+En diversos Shows se ha compartido escenario con reconocidas bandas y artistas como “Horcas”, “Tren Loco”, “Serpentor”, Alejandro Medina y Víctor “Vitico” Bereciartúa.
+<br>
+La banda ha experimentado varias formaciones a lo largo de estos 12 años.
+Actualmente Dr. Malestar está conformada por:
+<br>
+<b>Gustavo "Negro" González</b>  <br> 
+(Voz y armónica) <br>
+<b>Hugo "Mosca" Fleitas</b>  <br>
+(Batería) <br>
+<b>Jorge "Moncho" Carrizo</b>  <br>
+(Guitarra y coros) <br>
+<b>Julio "Tano" Macaroni</b>  <br>
+(Guitarra y coros) <br>
+<b>Héctor Bass</b> <br>
+(Bajo)
 
+        </p>
+    </div>
+
+    <!-- Fila de imágenes inferior -->
+    <div class="rowImages">
+        <img src="img/hector2.jpg" alt="Héctor Bass" class="clickable" onclick="openModal(this)">
+        <img src="img/Tano2.jpg" alt="Julio Macaroni" class="clickable" onclick="openModal(this)">
+        <img src="img/hugo2.jpg" alt="Hugo González" class="clickable" onclick="openModal(this)">
+        <img src="img/negro2.jpg" alt="Hugo González" class="clickable" onclick="openModal(this)">
+        <img src="img/banda2.jpg" alt="Hugo González" class="clickable" onclick="openModal(this)">
+        <img src="img/negro3.jpg" alt="Hugo González" class="clickable" onclick="openModal(this)">
+    
+    </div>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
 </div>
