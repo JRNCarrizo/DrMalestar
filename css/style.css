@@ -623,3 +623,26 @@ nav {
   margin: 20px auto; /* Centra el contenedor y agrega margen superior e inferior */
 }
 
+
+
+
+
+.bodyne {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: flex-end; /* Alinea el contenido al fondo */
+  padding-bottom: 10px; /* Espacio entre la imagen y el borde inferior */
+}
+
+.diva {
+  text-align: center; /* Centra el contenido dentro del div */
+}
+
+.imgIns {
+  max-width: 10%; /* Hace que la imagen sea responsiva */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  transition: transform 0.3s ease; /* Suaviza la transición */ 
+}
+.imgIns:hover {
+  transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
+}
