@@ -610,3 +610,16 @@ nav {
   color: #ffffff;
 
 }
+
+
+.carousel-image {
+  height: 300px; /* Ajusta esta altura según tus necesidades */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9); /* Sombra */
+  margin: 20px auto; /* Centra el contenedor y agrega margen superior e inferior */
+}
+
