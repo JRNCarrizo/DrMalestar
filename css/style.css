@@ -533,8 +533,7 @@ nav {
   background-color: #900c3f; /* Color de fondo al hacer clic */
 }
 
-
-
+/* Comportamiento  */
 .modal {
   display: none; /* Oculto por defecto */
   position: fixed; /* Fijo al viewport */
@@ -626,23 +625,50 @@ nav {
 
 
 
+/* Configuracion container finales con contactos */
 
-.bodyne {
-  display: flex;
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: flex-end; /* Alinea el contenido al fondo */
-  padding-bottom: 10px; /* Espacio entre la imagen y el borde inferior */
-}
-
-.diva {
-  text-align: center; /* Centra el contenido dentro del div */
-}
 
 .imgIns {
-  max-width: 10%; /* Hace que la imagen sea responsiva */
+  max-width: 50px; /* Hace que la imagen sea responsiva */
   height: auto; /* Mantiene las proporciones de la imagen */
   transition: transform 0.3s ease; /* Suaviza la transición */ 
+  margin-top: 30px;
 }
 .imgIns:hover {
   transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
+}
+
+
+
+.row {
+    display: flex;
+    justify-content: center; /* Asegura que los cuadros estén centrados */
+}
+
+.col {
+  
+    width: 10%; /* Ajusta este valor para más o menos ancho, en porcentaje */
+    max-width: 200px; /* Establece un ancho máximo para evitar que se vuelvan demasiado grandes */
+  border: 2px solid #ffffff; /* Puedes cambiar el color y el grosor */
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px; /* Bordes redondeados opcional */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+  background-color: #000000; /* Color de fondo opcional */
+  text-align: center; /* Centra el texto dentro del cuadro */
+  justify-content: center; /* Centra verticalmente */
+}
+
+
+/* flechas carrusel */
+.carousel-indicators {
+  bottom: -20px; /* Ajusta este valor según tus necesidades */
+  margin-bottom: 20px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(174, 0, 0, 0.9); /* Fondo semitransparente para mejor visibilidad */
+  border-radius: 50%; /* Forma circular */
 }
