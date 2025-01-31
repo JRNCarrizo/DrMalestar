@@ -251,20 +251,14 @@ nav {
   font-weight: 400;
   font-style: normal;
   background-color: #000000;
-  border-radius: 10px;
-  border: 2px solid #dc0000;
+  display: inline-block; /* Permite que el borde se ajuste al tamaño del contenido */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  padding: 10px; /* Opcional: añade espacio alrededor del texto */
+  border: 2px solid #ffffff; /* Define el borde alrededor del título */
+border-radius: 15px;
 }
 
-    /* videos */
-    .tituloVideo{
-      text-align: center;
-      color: rgb(255, 255, 255); 
-      background-color: #000000;
-      border-radius: 25px;
-      border: 2px solid #ffffff;
-      margin-top: 20px;
-    
-  }
+   
     .video-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr); /* 2 columnas */
@@ -280,6 +274,7 @@ nav {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 15px;
     margin: 10px; /* Espaciado entre contenedores */
+    border-radius: 8px;
 }
 
 .video-container video {
@@ -384,9 +379,7 @@ nav {
   margin-bottom: 50px;
 }
 
-.titulos{
-  color: #ffffff;
-}
+
 
 /* Info final */
 
@@ -640,23 +633,47 @@ nav {
 
 
 
+.container {
+  display: flex; /* Usar flexbox para el contenedor */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+  margin: 0 auto; /* Centra el contenedor en la página */
+  padding: 20px; /* Añade padding alrededor del contenedor */
+  max-width: 1000px; /* Establece un ancho máximo para el contenedor */
+}
+
 .row {
-    display: flex;
-    justify-content: center; /* Asegura que los cuadros estén centrados */
+  display: flex;
+  justify-content: center; /* Centra los cuadros horizontalmente */
+  width: 100%; /* Asegura que la fila ocupe todo el ancho */
 }
 
 .col {
-  
-    width: 10%; /* Ajusta este valor para más o menos ancho, en porcentaje */
-    max-width: 200px; /* Establece un ancho máximo para evitar que se vuelvan demasiado grandes */
-  border: 2px solid #ffffff; /* Puedes cambiar el color y el grosor */
+  width: 45%;
+  /* max-width: 200px; */ /* Puedes comentar o ajustar esta línea */
+  border: 2px solid #ffffff;
   padding: 15px;
   margin: 10px;
-  border-radius: 8px; /* Bordes redondeados opcional */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
-  background-color: #000000; /* Color de fondo opcional */
-  text-align: center; /* Centra el texto dentro del cuadro */
-  justify-content: center; /* Centra verticalmente */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #000000;
+  text-align: center;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .col {
+    width: 80%;
+    /* max-width: none; */ /* Permite que las columnas crezcan más allá de 200px */
+  }
+}
+
+@media (max-width: 480px) {
+  .col {
+    width: 90%;
+    /* max-width: none; */ /* Permite que las columnas crezcan más allá de 200px */
+  }
 }
 
 
@@ -671,4 +688,17 @@ nav {
   height: 3rem;
   background-color: rgba(174, 0, 0, 0.9); /* Fondo semitransparente para mejor visibilidad */
   border-radius: 50%; /* Forma circular */
+}
+
+
+/* Título del formulario */
+.bungee-spice-regularFormulario {
+  font-family: "Bungee Spice", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #000000;
+  display: inline-block; /* Permite que el borde se ajuste al tamaño del contenido */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  padding: 10px; /* Opcional: añade espacio alrededor del texto */
+  border: 2px solid #ffffff; /* Define el borde alrededor del título */
 }
