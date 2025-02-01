@@ -702,3 +702,26 @@ border-radius: 15px;
   padding: 10px; /* Opcional: añade espacio alrededor del texto */
   border: 2px solid #ffffff; /* Define el borde alrededor del título */
 }
+
+
+/* boton RiderTecnico */
+.btnRider {
+  background-color: #4CAF50; /* Verde */
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 3px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+.btnRider:hover{
+  background-color: #004202;
+  color: #ccc;
+  transform: scale(1.1);
+}
+
