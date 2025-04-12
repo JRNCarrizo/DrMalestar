@@ -26,7 +26,7 @@ nav {
     /* Color efecto y sombra de la barra de navegacion */
     .navbar {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
-        background: linear-gradient(135deg, #000000, #2d2c2c);
+        background: linear-gradient(135deg, #979797, #262626);
         
     }
     /* Fuente de letras de la barra */
@@ -88,7 +88,7 @@ nav {
 
     /* Imagenes que cambian */
 
-    @keyframes fondo-cambiar {
+    /* @keyframes fondo-cambiar {
         0% {
             background-image: url('/img/pappo1.avif');
         }
@@ -98,14 +98,14 @@ nav {
         100% {
             background-image: url('/img/pappo3.jpg');
         }
-    }
+    } */
     
   /* Estilos generales para .cuadro */
 .cuadro {
    
     max-width: 50%; /* Ancho máximo del 50% para pantallas grandes */
     height: 70vh; /* Altura adaptativa */
-    animation: fondo-cambiar 10s infinite; /* Cambia cada 10 segundos */
+    background-image: url('/img/logonuevo.jpg');
     background-size: cover; /* Cubrir todo el cuadro */
     border: 2px solid #fcfcfc;
     background-position: center; /* Centrar la imagen de fondo */
