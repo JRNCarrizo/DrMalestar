@@ -15,7 +15,7 @@ nav {
     font-family:monospace;
 }
 .nav-button:hover {
-    color: red;
+    
     transform: scale(1.3); /* Aumentar el tamaño sin cambiar la barra */
 }
 /* Color de la barra de navegacion */
@@ -26,7 +26,7 @@ nav {
     /* Color efecto y sombra de la barra de navegacion */
     .navbar {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
-        background: linear-gradient(135deg, #979797, #262626);
+        background: linear-gradient(100deg, #000000, #ff0000);
         
     }
     /* Fuente de letras de la barra */
@@ -46,20 +46,7 @@ nav {
     }
 
 
-      /* Texto desplazante */
-      .texto-desplazante {
-        display: inline-block; /* Permite que el texto ocupe solo el espacio requerido */
-        animation: desplazar 15s linear infinite; /* Animación de desplazamiento */
-    }
-    
-    @keyframes desplazar {
-        0% {
-            transform: translateX(100%); /* Comienza fuera de la vista a la derecha */
-        }
-        100% {
-            transform: translateX(-100%); /* Termina fuera de la vista a la izquierda */
-        }
-    }
+ 
 
     /* Fuente Letras que pasan */
 
@@ -75,98 +62,102 @@ nav {
         font-style: normal;
       }
     
-    /* ImagenPrincipal */
-    .contenedor {
-        width:100%; /* Ocupar todo el ancho */
+      .contenedor {
         display: flex;
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Alinea verticalmente */
-        padding: 20px;
-        margin: 0;
-        height: 120vh; /* Altura de la ventana gráfica */
-    }
-
-    /* Imagenes que cambian */
-
-    /* @keyframes fondo-cambiar {
+        flex-direction: column; /* Organiza los elementos en columna */
+        justify-content: flex-start; /* Alinea los elementos al principio (parte superior) */
+        align-items: center; /* Centra horizontalmente */
+        background-image: url('/img/fondonuevo.jpg');
+        background-size: cover;
+        background-position: center;
+        border: 2px solid #fcfcfc;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+        width: 50%;
+        height: 300px; /* Altura definida */
+        margin: 140px auto 0; /* Centrado horizontal con margen superior */
+        padding-top: 10px; /* Espacio en la parte superior */
+        overflow: hidden; /* Asegura que el texto no se desborde */
+      }
+      
+      .contenedor {
+        display: flex;
+        flex-direction: column; /* Organiza los elementos en columna */
+        justify-content: flex-start; /* Alinea los elementos al principio (parte superior) */
+        align-items: center; /* Centra horizontalmente */
+        background-image: url('/img/fondonuevo.jpg');
+        background-size: cover;
+        background-position: center;
+        border: 2px solid #fcfcfc;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+        width: 50%;
+        height: 300px; /* Altura definida */
+        margin: 140px auto 0; /* Centrado horizontal con margen superior */
+        padding-top: 10px; /* Espacio en la parte superior */
+        position: relative; /* Necesario para el posicionamiento absoluto del texto */
+      }
+      
+      .contenedor img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        margin: 10px 0; /* Espacio entre la imagen y el texto */
+      }
+      
+      .contenedor {
+        display: flex;
+        flex-direction: column; /* Organiza los elementos en columna */
+        justify-content: flex-start; /* Alinea los elementos al principio (parte superior) */
+        align-items: center; /* Centra horizontalmente */
+        background-image: url('/img/fondonuevo.jpg');
+        background-size: cover;
+        background-position: center;
+        border: 2px solid #fcfcfc;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+        width: 50%;
+        height: 300px; /* Altura definida */
+        margin: 140px auto 0; /* Centrado horizontal con margen superior */
+        padding-top: 10px; /* Espacio en la parte superior */
+        position: relative; /* Necesario para el posicionamiento absoluto del texto */
+      }
+      
+      .contenedor img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        margin: 10px 0; /* Espacio entre la imagen y el texto */
+      }
+      
+      .texto-desplazante {
+        font-size: 25px; /* Ajusta el tamaño del texto */
+        text-align: center; /* Centra el texto */
+        margin-bottom: 10px; /* Espacio entre el texto y la imagen */
+        white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+        color: white; /* Color del texto */
+        animation: desplazar 15s linear infinite; /* Aumenta la duración de la animación */
+        position: absolute; /* Permite que el texto se superponga */
+        top: 10px; /* Espacio desde la parte superior */
+        left: 50%; /* Centra horizontalmente */
+        transform: translateX(-50%); /* Ajusta la posición para centrar */
+      }
+      
+      @keyframes desplazar {
         0% {
-            background-image: url('/img/pappo1.avif');
-        }
-        50% {
-            background-image: url('/img/pappo2.webp');
+          transform: translateX(100%); /* Comienza fuera de la vista a la derecha */
         }
         100% {
-            background-image: url('/img/pappo3.jpg');
+          transform: translateX(-100%); /* Termina fuera de la vista a la izquierda */
         }
-    } */
-    
-  /* Estilos generales para .cuadro */
-.cuadro {
-   
-    max-width: 50%; /* Ancho máximo del 50% para pantallas grandes */
-    height: 70vh; /* Altura adaptativa */
-    background-image: url('/img/logonuevo.jpg');
-    background-size: cover; /* Cubrir todo el cuadro */
-    border: 2px solid #fcfcfc;
-    background-position: center; /* Centrar la imagen de fondo */
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Sombra */
-    position: relative; /* Posición relativa para el contenido interno */
-    margin: 20px 0; /* Espacio superior e inferior */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Estilos para la imagen dentro de .cuadro */
-  .cuadro img {
-    position: absolute;
-    max-width: 100%; /* La imagen principal ocupa todo el ancho */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-top: 10%;
-    object-fit: cover; /* Asegura que la imagen cubra el área */
-  }
-  
-  /* Estilos para el contenido dentro de .cuadro */
-  .contenido {
-    padding: 1%; /* Espacio interno */
-    color: white; /* Color del texto */
-    margin: 0; /* Elimina márgenes */
-    font-size: 200%; /* Tamaño de fuente */
-    white-space: nowrap; /* Evita que el texto se divida */
-    overflow: hidden; /* Oculta el texto que se desborda */
-    position: relative; /* Para que el texto se posicione dentro de su contenedor */
-  }
-  
-  /* Media query para pantallas medianas */
-  @media (min-width: 481px) and (max-width: 768px) {
-    .cuadro {
-      margin-top: 20%;
-      max-width: 95%; /* Ancho mayor en pantallas más pequeñas */
-      height: 70vh; /* Ajusta la altura también */
-    }
-    .contenedor {
-
-      height: auto; /* Ajusta la altura automáticamente */
-    }
-    .cuadro img {
-        margin-top: 1%;
       }
-  }
   
-  /* Media query para pantallas pequeñas */
-  @media (max-width: 480px) {
-    .cuadro {
-    margin-top: 30%;
-      max-width: 100%; /* Ancho mayor en pantallas más pequeñas */
-      max-height: 400px; /* Ajusta la altura también */
-    }
-    .cuadro img {
-      margin-top: 30%;
-    }
-    .contenedor {
-      height: auto; /* Ajusta la altura automáticamente */
-    }
-  }
+    
+    
+    /* Imagenes que cambian */
+
+    
+
 
   /* cartelera */
   
