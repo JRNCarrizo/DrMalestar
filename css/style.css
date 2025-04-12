@@ -26,7 +26,7 @@ nav {
     /* Color efecto y sombra de la barra de navegacion */
     .navbar {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
-        background: linear-gradient(100deg, #000000, #ff0000);
+        background: linear-gradient(100deg, #000000, #720000);
         
     }
     /* Fuente de letras de la barra */
@@ -62,97 +62,54 @@ nav {
         font-weight: 400;
         font-style: normal;
       }
-    
+   
+      
       .contenedor {
         display: flex;
-        flex-direction: column; /* Organiza los elementos en columna */
-        justify-content: flex-start; /* Alinea los elementos al principio (parte superior) */
-        align-items: center; /* Centra horizontalmente */
-        background-image: url('/img/fondonuevo.jpg');
-        background-size: cover;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-image: url('/img/logonuevo.jpg');
+        background-repeat: no-repeat;
         background-position: center;
         border: 2px solid #fcfcfc;
         border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-        width: 50%;
-        height: 300px; /* Altura definida */
+        width: 50%; /* Ancho del contenedor ajustado al 80% */
+        max-width: 1200px; /* Ancho máximo para pantallas grandes */
+        height: 70vh; /* Altura del contenedor */
         margin: 140px auto 0; /* Centrado horizontal con margen superior */
-        padding-top: 10px; /* Espacio en la parte superior */
-        overflow: hidden; /* Asegura que el texto no se desborde */
-      }
-      
+        padding-top: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+    @media (max-width: 480px) {
       .contenedor {
-        display: flex;
-        flex-direction: column; /* Organiza los elementos en columna */
-        justify-content: flex-start; /* Alinea los elementos al principio (parte superior) */
-        align-items: center; /* Centra horizontalmente */
-        background-image: url('/img/fondonuevo.jpg');
-        background-size: cover;
-        background-position: center;
-        border: 2px solid #fcfcfc;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-        width: 50%;
-        height: 300px; /* Altura definida */
-        margin: 140px auto 0; /* Centrado horizontal con margen superior */
-        padding-top: 10px; /* Espacio en la parte superior */
-        position: relative; /* Necesario para el posicionamiento absoluto del texto */
+          width: 100%; /* Cada flyer ocupa el 100% del ancho */
+          background-size: 100%;
       }
+  }
       
-      .contenedor img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        margin: 10px 0; /* Espacio entre la imagen y el texto */
-      }
-      
-      .contenedor {
-        display: flex;
-        flex-direction: column; /* Organiza los elementos en columna */
-        justify-content: flex-start; /* Alinea los elementos al principio (parte superior) */
-        align-items: center; /* Centra horizontalmente */
-        background-image: url('/img/fondonuevo.jpg');
-        background-size: cover;
-        background-position: center;
-        border: 2px solid #fcfcfc;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-        width: 50%;
-        height: 300px; /* Altura definida */
-        margin: 140px auto 0; /* Centrado horizontal con margen superior */
-        padding-top: 10px; /* Espacio en la parte superior */
-        position: relative; /* Necesario para el posicionamiento absoluto del texto */
-      }
-      
-      .contenedor img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        margin: 10px 0; /* Espacio entre la imagen y el texto */
-      }
       
       .texto-desplazante {
         font-size: 25px; /* Ajusta el tamaño del texto */
         text-align: center; /* Centra el texto */
-        margin-bottom: 10px; /* Espacio entre el texto y la imagen */
         white-space: nowrap; /* Evita que el texto se divida en varias líneas */
         color: white; /* Color del texto */
-        animation: desplazar 15s linear infinite; /* Aumenta la duración de la animación */
         position: absolute; /* Permite que el texto se superponga */
         top: 10px; /* Espacio desde la parte superior */
-        left: 50%; /* Centra horizontalmente */
-        transform: translateX(-50%); /* Ajusta la posición para centrar */
+        left: 100%; /* Comienza fuera de la vista a la derecha */
+        animation: desplazar 20s linear infinite; /* Aumenta la duración de la animación */
       }
       
       @keyframes desplazar {
         0% {
-          transform: translateX(100%); /* Comienza fuera de la vista a la derecha */
+          transform: translateX(0); /* Comienza en su posición original */
         }
         100% {
-          transform: translateX(-100%); /* Termina fuera de la vista a la izquierda */
+          transform: translateX(-158%); /* Termina fuera de la vista a la izquierda */
         }
       }
-  
     
     
     /* Imagenes que cambian */
