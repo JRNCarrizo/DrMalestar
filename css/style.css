@@ -75,7 +75,7 @@ nav {
         border: 2px solid #fcfcfc;
         border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-        width: 50%; /* Ancho del contenedor ajustado al 80% */
+        width: 48%; /* Ancho del contenedor ajustado al 80% */
         max-width: 1200px; /* Ancho máximo para pantallas grandes */
         height: 70vh; /* Altura del contenedor */
         margin: 140px auto 0; /* Centrado horizontal con margen superior */
